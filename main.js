@@ -71,7 +71,7 @@ function checkLogin(event) {
     event.preventDefault();
     return;
   }
-  if (positionX.value > 300) {
+  if (positionX.value > 150) {
     alert("positionX not valid!!");
     positionX.style.backgroundColor = "red";
     positionX.focus();
@@ -130,8 +130,8 @@ function drawRectangle() {
   const myCanvas = document.querySelector("#myCanvas");
   const painter = myCanvas.getContext("2d");
   painter.strokeStyle = "blue";
-  painter.strokeRect(positionX, positionY, widthIn, heightIn);
-  painter.fillRect;
+  painter.strokeRect(+positionX, +positionY, +widthIn, +heightIn);
+  painter.fillStyle = "red";
 }
 
 function clearCanvas() {
